@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		0244F5FF228C7EAE00EC451F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0244F5FE228C7EAE00EC451F /* AppDelegate.swift */; };
-		0244F601228C7EAE00EC451F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0244F600228C7EAE00EC451F /* ViewController.swift */; };
 		0244F604228C7EAE00EC451F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0244F602228C7EAE00EC451F /* Main.storyboard */; };
 		0244F606228C7EAE00EC451F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0244F605228C7EAE00EC451F /* Assets.xcassets */; };
 		0244F609228C7EAE00EC451F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0244F607228C7EAE00EC451F /* LaunchScreen.storyboard */; };
+		0244F612228C844A00EC451F /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0244F611228C844A00EC451F /* Cat.swift */; };
+		0244F614228C84DC00EC451F /* CatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0244F613228C84DC00EC451F /* CatController.swift */; };
+		0244F616228C897C00EC451F /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0244F615228C897C00EC451F /* CatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0244F5FB228C7EAE00EC451F /* API2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = API2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0244F5FE228C7EAE00EC451F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0244F600228C7EAE00EC451F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0244F603228C7EAE00EC451F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0244F605228C7EAE00EC451F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0244F608228C7EAE00EC451F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0244F60A228C7EAF00EC451F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0244F611228C844A00EC451F /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		0244F613228C84DC00EC451F /* CatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatController.swift; sourceTree = "<group>"; };
+		0244F615228C897C00EC451F /* CatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,24 @@
 		0244F5FD228C7EAE00EC451F /* API2 */ = {
 			isa = PBXGroup;
 			children = (
-				0244F5FE228C7EAE00EC451F /* AppDelegate.swift */,
-				0244F600228C7EAE00EC451F /* ViewController.swift */,
+				0244F610228C7EBC00EC451F /* Resources */,
 				0244F602228C7EAE00EC451F /* Main.storyboard */,
+				0244F615228C897C00EC451F /* CatViewController.swift */,
+				0244F611228C844A00EC451F /* Cat.swift */,
+				0244F613228C84DC00EC451F /* CatController.swift */,
+			);
+			path = API2;
+			sourceTree = "<group>";
+		};
+		0244F610228C7EBC00EC451F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0244F5FE228C7EAE00EC451F /* AppDelegate.swift */,
 				0244F605228C7EAE00EC451F /* Assets.xcassets */,
 				0244F607228C7EAE00EC451F /* LaunchScreen.storyboard */,
 				0244F60A228C7EAF00EC451F /* Info.plist */,
 			);
-			path = API2;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0244F601228C7EAE00EC451F /* ViewController.swift in Sources */,
+				0244F612228C844A00EC451F /* Cat.swift in Sources */,
+				0244F616228C897C00EC451F /* CatViewController.swift in Sources */,
+				0244F614228C84DC00EC451F /* CatController.swift in Sources */,
 				0244F5FF228C7EAE00EC451F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = API2/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/API2/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +316,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = API2/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/API2/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
