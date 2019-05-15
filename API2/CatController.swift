@@ -13,9 +13,7 @@ class CatController {
     
     func fetchMyCat(completion: @escaping (Cat?) -> Void) {
         guard let baseURL = URL(string: "https://api.thecatapi.com/v1/images/search") else {return}
-//        let urlWithKey = baseURL.appendingPathComponent("api_key=93fd4773-e79f-48ef-bf61-64e804d40c12")
         let apiKeyQueryItem = URLQueryItem(name: "api_key", value: "93fd4773-e79f-48ef-bf61-64e804d40c12")
-        //let request = URLRequest(url: baseURL)
         var component = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         component?.queryItems = [apiKeyQueryItem]
         guard let finalURL = component?.url else {return}
